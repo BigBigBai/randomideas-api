@@ -35,6 +35,11 @@ class IdeaList {
         return tagClass;
     }
 
+    addIdeaToList(idea) {
+        this._ideas.push(idea);
+        this.render();
+    }
+
     render() {
         this._ideaListEl.innerHTML = this._ideas.map((idea) => {
             const tagClass = this.getTagClass(idea.tag);
